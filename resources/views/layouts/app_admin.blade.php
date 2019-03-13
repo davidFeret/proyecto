@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
 
     <link rel="shortcut icon" href="{{asset('asset/img/logomi.png')}}">
-    
-    <link rel="shortcut icon" href="asset/img/logomi.png">
     <!-- end: Css -->
 
     @yield('styles')

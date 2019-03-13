@@ -13,21 +13,8 @@
         <span class="bottom"></span>
       </div>
       <a href="index.html" class="navbar-brand"> 
-        <b>MIMIN</b>
+        <b>DASILA</b>
       </a>
-
-      <ul class="nav navbar-nav search-nav">
-        <li>
-          <div class="search">
-            <span class="fa fa-search icon-search" style="font-size:23px;"></span>
-            <div class="form-group form-animate-text">
-              <input type="text" class="form-text" required>
-              <span class="bar"></span>
-              <label class="label-search">Type anywhere to <b>Search</b> </label>
-            </div>
-          </div>
-        </li>
-      </ul>
 
       <ul class="nav navbar-nav navbar-right user-nav">
         <li class="user-name"><span>Akihiko Avaron</span></li>
@@ -62,112 +49,48 @@
     <div class="sub-left-menu scroll">
       <ul class="nav nav-list">
         <li><div class="left-bg"></div></li>
+        {{-- Perfil --}}
+        <li class="time" align="center">
+          <img src="{{asset('asset/img/avatar3.png')}}" alt="" class="img-circle avatar"
+          style="width: 80%; height:80%; margin:5%;">
+        </li>
+        <li>
+          <h3 class="animated fadeInLeft" align="center">Nombre del usuario</h3>
+        </li>
         <li class="time">
           <h1 class="animated fadeInLeft">21:00</h1>
           <p class="animated fadeInRight">Sat,October 1st 2029</p>
         </li>
-        <li class="active ripple">
-          <a class="tree-toggle nav-header"><span class="fa-home fa"></span> Dashboard 
-            <span class="fa-angle-right fa right-arrow text-right"></span>
-          </a>
-          <ul class="nav nav-list tree">
-            <li><a href="dashboard-v1.html">Dashboard v.1</a></li>
-            <li><a href="dashboard-v2.html">Dashboard v.2</a></li>
-          </ul>
-        </li>
+        {{-- Cierre de perfil --}}
+        {{-- Opciones --}}
+        <li class="active"><a href="#"><span class="fa-home fa"></span>Inicio</a></li>
+
         <li class="ripple">
-          <a class="tree-toggle nav-header">
-            <span class="fa-diamond fa"></span> Layout
+          <a class="tree-toggle nav-header" href="#"><span class="fa-home fa"></span> Usuarios 
             <span class="fa-angle-right fa right-arrow text-right"></span>
           </a>
           <ul class="nav nav-list tree">
-            <li><a href="topnav.html">Top Navigation</a></li>
-            <li><a href="boxed.html">Boxed</a></li>
+            <li><a href="#">Agregar usuario</a></li>
+            <li><a href="#">Ver usuarios</a></li>
           </ul>
         </li>
+
         <li class="ripple">
-          <a class="tree-toggle nav-header">
-            <span class="fa-area-chart fa"></span> Charts
+          <a class="tree-toggle nav-header" href="#"><span class="fa-home fa"></span> Productos 
             <span class="fa-angle-right fa right-arrow text-right"></span>
           </a>
           <ul class="nav nav-list tree">
-            <li><a href="chartjs.html">ChartJs</a></li>
-            <li><a href="morris.html">Morris</a></li>
-            <li><a href="flot.html">Flot</a></li>
-            <li><a href="sparkline.html">SparkLine</a></li>
+            <li><a href="#">Agregar producto</a></li>
+            <li><a href="#">Ver productos</a></li>
           </ul>
         </li>
-        <li class="ripple"><a class="tree-toggle nav-header">
-          <span class="fa fa-pencil-square"></span> Ui Elements  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
-          <ul class="nav nav-list tree">
-            <li><a href="color.html">Color</a></li>
-            <li><a href="weather.html">Weather</a></li>
-            <li><a href="typography.html">Typography</a></li>
-            <li><a href="icons.html">Icons</a></li>
-            <li><a href="buttons.html">Buttons</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="panels.html">Panels & Tabs</a></li>
-            <li><a href="notifications.html">Notifications & Tooltip</a></li>
-            <li><a href="badges.html">Badges & Label</a></li>
-            <li><a href="progress.html">Progress</a></li>
-            <li><a href="sliders.html">Sliders</a></li>
-            <li><a href="timeline.html">Timeline</a></li>
-            <li><a href="modal.html">Modals</a></li>
-          </ul>
-        </li>
-        <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-check-square-o"></span> Forms  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
-          <ul class="nav nav-list tree">
-            <li><a href="formelement.html">Form Element</a></li>
-            <li><a href="#">Wizard</a></li>
-            <li><a href="#">File Upload</a></li>
-            <li><a href="#">Text Editor</a></li>
-          </ul>
-        </li>
-        <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-table"></span> Tables  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
-          <ul class="nav nav-list tree">
-            <li><a href="datatables.html">Data Tables</a></li>
-            <li><a href="handsontable.html">handsontable</a></li>
-            <li><a href="tablestatic.html">Static</a></li>
-          </ul>
-        </li>
-        <li class="ripple"><a href="calendar.html"><span class="fa fa-calendar-o"></span>Calendar</a></li>
-        <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-envelope-o"></span> Mail <span class="fa-angle-right fa right-arrow text-right"></span> </a>
-          <ul class="nav nav-list tree">
-            <li><a href="mail-box.html">Inbox</a></li>
-            <li><a href="compose-mail.html">Compose Mail</a></li>
-            <li><a href="view-mail.html">View Mail</a></li>
-          </ul>
-        </li>
-        <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-file-code-o"></span> Pages  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
-          <ul class="nav nav-list tree">
-            <li><a href="forgotpass.html">Forgot Password</a></li>
-            <li><a href="login.html">SignIn</a></li>
-            <li><a href="reg.html">SignUp</a></li>
-            <li><a href="article-v1.html">Article v1</a></li>
-            <li><a href="search-v1.html">Search Result v1</a></li>
-            <li><a href="productgrid.html">Product Grid</a></li>
-            <li><a href="profile-v1.html">Profile v1</a></li>
-            <li><a href="invoice-v1.html">Invoice v1</a></li>
-          </ul>
-        </li>
-        <li class="ripple"><a class="tree-toggle nav-header"><span class="fa "></span> MultiLevel  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
-          <ul class="nav nav-list tree">
-            <li><a href="view-mail.html">Level 1</a></li>
-            <li><a href="view-mail.html">Level 1</a></li>
-            <li class="ripple">
-              <a class="sub-tree-toggle nav-header">
-                <span class="fa fa-envelope-o"></span> Level 1
-                <span class="fa-angle-right fa right-arrow text-right"></span>
-              </a>
-              <ul class="nav nav-list sub-tree">
-                <li><a href="mail-box.html">Level 2</a></li>
-                <li><a href="compose-mail.html">Level 2</a></li>
-                <li><a href="view-mail.html">Level 2</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="credits.html">Credits</a></li>
+
+        <li class=""><a href="#"><span class="fa-home fa"></span>Pedidos</a></li>
+
+        <li class=""><a href="#"><span class="fa-home fa"></span>Ventas</a></li>
+
+        <li class=""><a href="#"><span class="fa-home fa"></span>Configuración</a></li>
+
       </ul>
     </div>
   </div>
@@ -176,343 +99,368 @@
 
 
   <!-- start: content -->
-    <div id="content">
-        <div class="panel">
-          <div class="panel-body">
-              <div class="col-md-6 col-sm-12">
-                <h3 class="animated fadeInLeft">Customer Service</h3>
-                <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
+  <div id="content">
+    <div class="panel">
+      <div class="panel-body">
+          <div class="col-md-6 col-sm-12">
+            <h3 class="animated fadeInLeft">Customer Service</h3>
+            <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> Batavia,Indonesia</p>
 
-                <ul class="nav navbar-nav">
-                    <li><a href="" >Impedit</a></li>
-                    <li><a href="" class="active">Virtute</a></li>
-                    <li><a href="">Euismod</a></li>
-                    <li><a href="">Explicar</a></li>
-                    <li><a href="">Rebum</a></li>
-                </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="" >Impedit</a></li>
+                <li><a href="" class="active">Virtute</a></li>
+                <li><a href="">Euismod</a></li>
+                <li><a href="">Explicar</a></li>
+                <li><a href="">Rebum</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-md-6 col-sm-12">
+            <div class="col-md-6 col-sm-6 text-right" style="padding-left:10px;">
+              <h3 style="color:#DDDDDE;"><span class="fa  fa-map-marker"></span> Banyumas</h3>
+              <h1 style="margin-top: -10px;color: #ddd;">30<sup>o</sup></h1>
             </div>
-            <div class="col-md-6 col-sm-12">
-                <div class="col-md-6 col-sm-6 text-right" style="padding-left:10px;">
-                  <h3 style="color:#DDDDDE;"><span class="fa  fa-map-marker"></span> Banyumas</h3>
-                  <h1 style="margin-top: -10px;color: #ddd;">30<sup>o</sup></h1>
+            <div class="col-md-6 col-sm-6">
+                <div class="wheather">
+                <div class="stormy rainy animated pulse infinite">
+                  <div class="shadow">
+                    
+                  </div>
                 </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="wheather">
-                    <div class="stormy rainy animated pulse infinite">
-                      <div class="shadow">
-                        
+                <div class="sub-wheather">
+                  <div class="thunder">
+                    
+                  </div>
+                  <div class="rain">
+                    <div class="droplet droplet1"></div>
+                    <div class="droplet droplet2"></div>
+                    <div class="droplet droplet3"></div>
+                    <div class="droplet droplet4"></div>
+                    <div class="droplet droplet5"></div>
+                    <div class="droplet droplet6"></div>
+                  </div>
+                </div>
+              </div>
+            </div>                   
+          </div>
+      </div>                    
+    </div>
+
+    <div class="col-md-12" style="padding:20px;">
+      <div class="col-md-12 padding-0">
+        <div class="col-md-8 padding-0">
+          <div class="col-md-12 padding-0">
+            <div class="col-md-6">
+              <div class="panel box-v1">
+                <div class="panel-heading bg-white border-none">
+                  <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
+                    <h4 class="text-left">Visit</h4>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                      <h4>
+                      <span class="icon-user icons icon text-right"></span>
+                      </h4>
+                  </div>
+                </div>
+                <div class="panel-body text-center">
+                  <h1>51181,320</h1>
+                  <p>User active</p>
+                  <hr/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel box-v1">
+                <div class="panel-heading bg-white border-none">
+                  <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
+                    <h4 class="text-left">Orders</h4>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                      <h4>
+                      <span class="icon-basket-loaded icons icon text-right"></span>
+                      </h4>
+                  </div>
+                </div>
+                <div class="panel-body text-center">
+                  <h1>51181,320</h1>
+                  <p>New Orders</p>
+                  <hr/>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{-- Aquí --}}
+          <div class="col-md-12">
+            <div class="panel box-v4">
+              <div class="panel-heading bg-white border-none">
+                <h4><span class="icon-notebook icons"></span> Formulario de ejemplo </h4>
+              </div>
+              <div class="panel-body padding-0">
+                <div class="col-md-12 col-xs-12 col-md-12 padding-0 box-v4-alert">
+
+                  <form action="">
+
+                    <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                      <input type="text" class="form-text" name="#" required>
+                      <span class="bar"></span>
+                      <label>Nombre</label>
+                    </div>
+
+                    <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                      <input type="text" class="form-text" name="#" required>
+                      <span class="bar"></span>
+                      <label>Apellido</label>
+                    </div>
+
+                    <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                      <input type="text" class="form-text" name="#" required>
+                      <span class="bar"></span>
+                      <label>Usuario</label>
+                    </div>
+
+                    <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                      <input type="password" class="form-text" name="#" required>
+                      <span class="bar"></span>
+                      <label>Contraseña</label>
+                    </div>
+
+                  </form>
+
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12 padding-0">
+              <div class="panel box-v2">
+                  <div class="panel-heading padding-0">
+                    <img src="asset/img/bg2.jpg" class="box-v2-cover img-responsive"/>
+                    <div class="box-v2-detail">
+                      <img src="asset/img/avatar.jpg" class="img-responsive"/>
+                      <h4>Akihiko Avaron</h4>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="col-md-12 padding-0 text-center">
+                      <div class="col-md-4 col-sm-4 col-xs-6 padding-0">
+                          <h3>2.000</h3>
+                          <p>Post</p>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-6 padding-0">
+                          <h3>2.232</h3>
+                          <p>share</p>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12 padding-0">
+                          <h3>4.320</h3>
+                          <p>photos</p>
                       </div>
                     </div>
-                    <div class="sub-wheather">
-                      <div class="thunder">
-                        
-                      </div>
-                      <div class="rain">
-                          <div class="droplet droplet1"></div>
-                          <div class="droplet droplet2"></div>
-                          <div class="droplet droplet3"></div>
-                          <div class="droplet droplet4"></div>
-                          <div class="droplet droplet5"></div>
-                          <div class="droplet droplet6"></div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 padding-0">
+              <div class="panel box-v3">
+                <div class="panel-heading bg-white border-none">
+                  <h4>Report</h4>
+                </div>
+                <div class="panel-body">
+                    
+                  <div class="media">
+                    <div class="media-left">
+                        <span class="icon-folder icons" style="font-size:2em;"></span>
+                    </div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Document Handling</h5>
+                        <div class="progress progress-mini">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
                         </div>
                     </div>
                   </div>
-                </div>                   
+
+                  <div class="media">
+                    <div class="media-left">
+                        <span class="icon-pie-chart icons" style="font-size:2em;"></span>
+                    </div>
+                    <div class="media-body">
+                      <h5 class="media-heading">UI/UX Development</h5>
+                        <div class="progress progress-mini">
+                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100" style="width: 19%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <div class="media-left">
+                        <span class="icon-energy icons" style="font-size:2em;"></span>
+                    </div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Server Optimation</h5>
+                        <div class="progress progress-mini">
+                          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="media">
+                    <div class="media-left">
+                        <span class="icon-user icons" style="font-size:2em;"></span>
+                    </div>
+                    <div class="media-body">
+                      <h5 class="media-heading">User Status</h5>
+                        <div class="progress progress-mini">
+                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                    <div class="media">
+                    <div class="media-left">
+                        <span class="icon-fire icons" style="font-size:2em;"></span>
+                    </div>
+                    <div class="media-body">
+                      <h5 class="media-heading">Firewall Status</h5>
+                        <div class="progress progress-mini">
+                          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-footer bg-white border-none">
+                    <center>
+                      <input type="button" value="download as pdf" class="btn btn-danger box-shadow-none"/>
+                    </center>
+                </div>
+              </div>
             </div>
-          </div>                    
+
+            <div class="col-md-12 padding-0">
+              <div class="panel bg-light-blue">
+                <div class="panel-body text-white">
+                    <p class="animated fadeInUp quote">Lorem ipsum dolor sit amet, consectetuer adipiscing elit Ut wisi..."</p>
+                    <div class="col-md-12 padding-0">
+                      <div class="text-left col-md-7 col-xs-12 col-sm-7 padding-0">
+                        <span class="fa fa-twitter fa-2x"></span>
+                        <span>22 May, 2015 via mobile</span>
+                      </div>
+                      <div style="padding-top:8px;" class="text-right col-md-5 col-xs-12 col-sm-5 padding-0">
+                        <span class="fa fa-retweet"></span> 2000
+                        <span class="fa fa-star"></span> 3000
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-md-12 card-wrap padding-0">
+        <div class="col-md-6">
+            <div class="panel">
+              <div class="panel-heading bg-white border-none" style="padding:20px;">
+                <div class="col-md-6 col-sm-6 col-sm-12 text-left">
+                  <h4>Line Chart</h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-sm-12">
+                    <div class="mini-onoffswitch pull-right onoffswitch-danger" style="margin-top:10px;">
+                      <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch1" checked>
+                      <label class="onoffswitch-label" for="myonoffswitch1"></label>
+                    </div>
+                </div>
+              </div>
+              <div class="panel-body" style="padding-bottom:50px;">
+                  <div id="canvas-holder1">
+                        <canvas class="line-chart" style="margin-top:30px;height:200px;"></canvas>
+                  </div>
+                  <div class="col-md-12" style="padding-top:20px;">
+                      <div class="col-md-4 col-sm-4 col-xs-6 text-center">
+                          <h2 style="line-height:.4;">$100.21</h2>
+                          <small>Total Laba</small>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-6 text-center">
+                          <h2 style="line-height:.4;">2000</h2>
+                          <small>Total Barang</small>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+                          <h2 style="line-height:.4;">$291.1</h2>
+                          <small>Total Pengeluaran</small>
+                      </div>
+                  </div>
+              </div>
+            </div>
         </div>
 
-        <div class="col-md-12" style="padding:20px;">
-            <div class="col-md-12 padding-0">
-                <div class="col-md-8 padding-0">
-                    <div class="col-md-12 padding-0">
-                        <div class="col-md-6">
-                            <div class="panel box-v1">
-                              <div class="panel-heading bg-white border-none">
-                                <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
-                                  <h4 class="text-left">Visit</h4>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                                    <h4>
-                                    <span class="icon-user icons icon text-right"></span>
-                                    </h4>
-                                </div>
-                              </div>
-                              <div class="panel-body text-center">
-                                <h1>51181,320</h1>
-                                <p>User active</p>
-                                <hr/>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="panel box-v1">
-                              <div class="panel-heading bg-white border-none">
-                                <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
-                                  <h4 class="text-left">Orders</h4>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
-                                    <h4>
-                                    <span class="icon-basket-loaded icons icon text-right"></span>
-                                    </h4>
-                                </div>
-                              </div>
-                              <div class="panel-body text-center">
-                                <h1>51181,320</h1>
-                                <p>New Orders</p>
-                                <hr/>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="panel box-v4">
-                            <div class="panel-heading bg-white border-none">
-                              <h4><span class="icon-notebook icons"></span> Agenda</h4>
-                            </div>
-                            <div class="panel-body padding-0">
-                                <div class="col-md-12 col-xs-12 col-md-12 padding-0 box-v4-alert">
-                                    <h2>Checking Your Server!</h2>
-                                    <p>Daily Check on Server status, mostly looking at servers with alerts/warnings</p>
-                                    <b><span class="icon-clock icons"></span> Today at 15:00</b>
-                                </div>
-                                <div class="calendar">
-                                  
-                                </div>
-                            </div>
-                        </div> 
+        <div class="col-md-6">
+            <div class="panel">
+              <div class="panel-heading bg-white border-none" style="padding:20px;">
+                <div class="col-md-6 col-sm-6 col-sm-12 text-left">
+                  <h4>Orders</h4>
+                </div>
+                <div class="col-md-6 col-sm-6 col-sm-12">
+                    <div class="mini-onoffswitch pull-right onoffswitch-primary" style="margin-top:10px;">
+                      <input type="checkbox" name="onoffswitch3" class="onoffswitch-checkbox" id="myonoffswitch3" checked>
+                      <label class="onoffswitch-label" for="myonoffswitch3"></label>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="col-md-12 padding-0">
-                      <div class="panel box-v2">
-                          <div class="panel-heading padding-0">
-                            <img src="asset/img/bg2.jpg" class="box-v2-cover img-responsive"/>
-                            <div class="box-v2-detail">
-                              <img src="asset/img/avatar.jpg" class="img-responsive"/>
-                              <h4>Akihiko Avaron</h4>
-                            </div>
-                          </div>
-                          <div class="panel-body">
-                            <div class="col-md-12 padding-0 text-center">
-                              <div class="col-md-4 col-sm-4 col-xs-6 padding-0">
-                                  <h3>2.000</h3>
-                                  <p>Post</p>
-                              </div>
-                              <div class="col-md-4 col-sm-4 col-xs-6 padding-0">
-                                  <h3>2.232</h3>
-                                  <p>share</p>
-                              </div>
-                              <div class="col-md-4 col-sm-4 col-xs-12 padding-0">
-                                  <h3>4.320</h3>
-                                  <p>photos</p>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
+              </div>
+              <div class="panel-body" style="padding-bottom:50px;">
+                  <div id="canvas-holder1">
+                    <canvas class="bar-chart"></canvas>
+                  </div>
+                  <div class="col-md-12 padding-0" >
+                    <div class="col-md-4 col-sm-4 hidden-xs" style="padding-top:20px;">
+                      <canvas class="doughnut-chart2"></canvas>
                     </div>
-
-                    <div class="col-md-12 padding-0">
-                      <div class="panel box-v3">
-                        <div class="panel-heading bg-white border-none">
-                          <h4>Report</h4>
-                        </div>
-                        <div class="panel-body">
-                            
-                          <div class="media">
-                            <div class="media-left">
-                                <span class="icon-folder icons" style="font-size:2em;"></span>
-                            </div>
-                            <div class="media-body">
-                              <h5 class="media-heading">Document Handling</h5>
-                                <div class="progress progress-mini">
-                                  <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
-                                    <span class="sr-only">60% Complete</span>
-                                  </div>
-                                </div>
-                            </div>
+                    <div class="col-md-8 col-sm-8 col-xs-12">
+                        <h4>Progress Produksi barang</h4>
+                        <p>Sed hendrerit. Curabitur blandit mollis lacus. Duis leo. Sed libero.fusce commodo aliquam arcu..</p>
+                        <div class="progress progress-mini">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                            <span class="sr-only">60% Complete</span>
                           </div>
-
-                          <div class="media">
-                            <div class="media-left">
-                                <span class="icon-pie-chart icons" style="font-size:2em;"></span>
-                            </div>
-                            <div class="media-body">
-                              <h5 class="media-heading">UI/UX Development</h5>
-                                <div class="progress progress-mini">
-                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100" style="width: 19%;">
-                                    <span class="sr-only">60% Complete</span>
-                                  </div>
-                                </div>
-                            </div>
-                          </div>
-
-                          <div class="media">
-                            <div class="media-left">
-                                <span class="icon-energy icons" style="font-size:2em;"></span>
-                            </div>
-                            <div class="media-body">
-                              <h5 class="media-heading">Server Optimation</h5>
-                                <div class="progress progress-mini">
-                                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
-                                    <span class="sr-only">60% Complete</span>
-                                  </div>
-                                </div>
-                            </div>
-                          </div>
-
-                          <div class="media">
-                            <div class="media-left">
-                                <span class="icon-user icons" style="font-size:2em;"></span>
-                            </div>
-                            <div class="media-body">
-                              <h5 class="media-heading">User Status</h5>
-                                <div class="progress progress-mini">
-                                  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%;">
-                                    <span class="sr-only">60% Complete</span>
-                                  </div>
-                                </div>
-                            </div>
-                          </div>
-
-                            <div class="media">
-                            <div class="media-left">
-                                <span class="icon-fire icons" style="font-size:2em;"></span>
-                            </div>
-                            <div class="media-body">
-                              <h5 class="media-heading">Firewall Status</h5>
-                                <div class="progress progress-mini">
-                                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                                    <span class="sr-only">60% Complete</span>
-                                  </div>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="panel-footer bg-white border-none">
-                            <center>
-                              <input type="button" value="download as pdf" class="btn btn-danger box-shadow-none"/>
-                            </center>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-md-12 padding-0">
-                      <div class="panel bg-light-blue">
-                        <div class="panel-body text-white">
-                            <p class="animated fadeInUp quote">Lorem ipsum dolor sit amet, consectetuer adipiscing elit Ut wisi..."</p>
-                            <div class="col-md-12 padding-0">
-                              <div class="text-left col-md-7 col-xs-12 col-sm-7 padding-0">
-                                <span class="fa fa-twitter fa-2x"></span>
-                                <span>22 May, 2015 via mobile</span>
-                              </div>
-                              <div style="padding-top:8px;" class="text-right col-md-5 col-xs-12 col-sm-5 padding-0">
-                                <span class="fa fa-retweet"></span> 2000
-                                <span class="fa fa-star"></span> 3000
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-          <div class="col-md-12 card-wrap padding-0">
-            <div class="col-md-6">
-                <div class="panel">
-                  <div class="panel-heading bg-white border-none" style="padding:20px;">
-                    <div class="col-md-6 col-sm-6 col-sm-12 text-left">
-                      <h4>Line Chart</h4>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-sm-12">
-                        <div class="mini-onoffswitch pull-right onoffswitch-danger" style="margin-top:10px;">
-                          <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch1" checked>
-                          <label class="onoffswitch-label" for="myonoffswitch1"></label>
                         </div>
                     </div>
                   </div>
-                  <div class="panel-body" style="padding-bottom:50px;">
-                      <div id="canvas-holder1">
-                            <canvas class="line-chart" style="margin-top:30px;height:200px;"></canvas>
-                      </div>
-                      <div class="col-md-12" style="padding-top:20px;">
-                          <div class="col-md-4 col-sm-4 col-xs-6 text-center">
-                              <h2 style="line-height:.4;">$100.21</h2>
-                              <small>Total Laba</small>
-                          </div>
-                          <div class="col-md-4 col-sm-4 col-xs-6 text-center">
-                              <h2 style="line-height:.4;">2000</h2>
-                              <small>Total Barang</small>
-                          </div>
-                          <div class="col-md-4 col-sm-4 col-xs-12 text-center">
-                              <h2 style="line-height:.4;">$291.1</h2>
-                              <small>Total Pengeluaran</small>
-                          </div>
-                      </div>
-                  </div>
-                </div>
+              </div>
             </div>
-
-            <div class="col-md-6">
-                <div class="panel">
-                  <div class="panel-heading bg-white border-none" style="padding:20px;">
-                    <div class="col-md-6 col-sm-6 col-sm-12 text-left">
-                      <h4>Orders</h4>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-sm-12">
-                        <div class="mini-onoffswitch pull-right onoffswitch-primary" style="margin-top:10px;">
-                          <input type="checkbox" name="onoffswitch3" class="onoffswitch-checkbox" id="myonoffswitch3" checked>
-                          <label class="onoffswitch-label" for="myonoffswitch3"></label>
-                        </div>
+        </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel bg-green text-white">
+                <div class="panel-body">
+                  <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="maps" style="height:300px;">
                     </div>
                   </div>
-                  <div class="panel-body" style="padding-bottom:50px;">
-                      <div id="canvas-holder1">
-                        <canvas class="bar-chart"></canvas>
-                      </div>
-                      <div class="col-md-12 padding-0" >
-                        <div class="col-md-4 col-sm-4 hidden-xs" style="padding-top:20px;">
-                          <canvas class="doughnut-chart2"></canvas>
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                      <canvas class="doughnut-chart hidden-xs"></canvas>
+                      <div class="col-md-12">
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                          <h1>72.993</h1>
+                          <p>People</p>
                         </div>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                            <h4>Progress Produksi barang</h4>
-                            <p>Sed hendrerit. Curabitur blandit mollis lacus. Duis leo. Sed libero.fusce commodo aliquam arcu..</p>
-                            <div class="progress progress-mini">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                <span class="sr-only">60% Complete</span>
-                              </div>
-                            </div>
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <h1>12.000</h1>
+                            <p>Active</p>
                         </div>
                       </div>
                   </div>
-                </div>
-            </div>
-            </div>
-            <div class="col-md-12">
-                <div class="panel bg-green text-white">
-                    <div class="panel-body">
-                      <div class="col-md-8 col-sm-8 col-xs-12">
-                        <div class="maps" style="height:300px;">
-                        </div>
-                      </div>
-                      <div class="col-md-4 col-sm-4 col-xs-12">
-                          <canvas class="doughnut-chart hidden-xs"></canvas>
-                          <div class="col-md-12">
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                              <h1>72.993</h1>
-                              <p>People</p>
-                            </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <h1>12.000</h1>
-                                <p>Active</p>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+  </div>
   <!-- end: content -->
 
 </div>
