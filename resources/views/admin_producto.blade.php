@@ -94,82 +94,46 @@
           <div class="col-md-12">
             <div class="panel box-v4">
               <div class="panel-heading bg-white border-none">
-                <h3 align="center"><span class="icons icon-user-follow"></span> Registro de nuevo usuario </h3>
+                <h3 align="center"><span class="icons icon-plus"></span> Agregar un nuevo producto </h3>
               </div>
               <div class="panel-body padding-0">
-                <div class="col-md-6 col-xs-6 col-md-6 col-lg-6box-v4-alert">
-                  <h3>Datos personales</h3>
-                  <form action="">
+                <div class="col-md-12 col-xs-12 col-md-12 col-lg-12 box-v4-alert">
+                  <h3>Datos del producto</h3>
+
+                  <form action="/admin/producto/guardar" method="POST" enctype="multipart/form-data">
+                    @csrf
 
                     <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                      <input type="text" class="form-text" name="#" required>
+                      <input type="text" class="form-text" name="nombre">
                       <span class="bar"></span>
-                      <label>Nombre(s)</label>
+                      <label>Nombre del producto</label>
                     </div>
 
                     <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                      <input type="text" class="form-text" name="#" required>
+                      <input type="number" class="form-text" name="precio">
                       <span class="bar"></span>
-                      <label>Apellido paterno</label>
+                      <label>Precio del producto</label>
                     </div>
 
                     <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                      <input type="text" class="form-text" name="#" required>
+                      <textarea type="text" class="form-text" name="description" rows="4"></textarea>
                       <span class="bar"></span>
-                      <label>Apellido materno</label>
+                      <label>Descripción del producto</label>
                     </div>
 
                     <div class="form-group form-animate-text">
-                      <input type="text" class="form-text Animated" required>
-                      <span class="bar"></span>
-                      <label><span class="fa fa-calendar"></span> Fecha de nacimiento
+                        <h4>Imagen principal del producto</h4>
+                        <input type="file" class="form-text Animated" name="imagen">
+                        <span class="bar"></span>
+                    </div>
+
+                    <div class="form-group form-animate-text">
+                        <button type="submit" style="font-size:15px;" class="btn btn-raised btn-primary">Guardar</button>
                     </div>
 
                   </form>
 
                 </div>
-
-                <div class="col-md-6 col-xs-6 col-md-6 col-lg-6box-v4-alert">
-                  <h3>Datos de usuario</h3>
-                    <form action="">
-  
-                      <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <input type="text" class="form-text" name="#" required>
-                        <span class="bar"></span>
-                        <label>Nombre de usuario</label>
-                      </div>
-  
-                      <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <input type="password" class="form-text" name="#" required>
-                        <span class="bar"></span>
-                        <label>Contraseña</label>
-                      </div>
-
-                      <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <input type="password" class="form-text" name="#" required>
-                        <span class="bar"></span>
-                        <label>Confirmar contraseña</label>
-                      </div>
-
-                      <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <input type="file" class="form-text" name="#" required>
-                        <span class="bar"></span>
-                      </div>
-
-                      <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <select class="select2-A">
-                          <optgroup label="Usuarios disponibles">
-                            <option value="Gerente">Gerente</option>
-                            <option value="Trabajador">Trabajador</option>
-                            <option value="Cliente">Cliente</option>
-                          </optgroup>
-                        </select>
-                      </div>
-
-                    </form>
-  
-                  </div>
-              </div>
             </div> 
           </div>
         </div>

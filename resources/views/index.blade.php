@@ -65,7 +65,7 @@
             <span class="fa-angle-right fa right-arrow text-right"></span>
           </a>
           <ul class="nav nav-list tree">
-            <li><a href="#">Agregar producto</a></li>
+            <li><a href="/admin/producto/agregar">Agregar producto</a></li>
             <li><a href="#">Ver productos</a></li>
           </ul>
         </li>
