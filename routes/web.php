@@ -30,3 +30,20 @@ Route::post('/admin/producto/guardar', 'productocontroller@store');
  */
 Route::get('/admin/pedido/registros', 'pedidocontroller@index');
 Route::get('/admin/pedido/especifico/{id}', 'pedidocontroller@show');
+
+/**
+ * ------------------------------------------------------------------------
+ * Rutas relacionadas a administrador: usuarios
+ * ------------------------------------------------------------------------
+ */
+Route::get('/usuarios', function(){
+	return view('admin_usuario');
+});
+Route::get('/mostrar_usuarios', function(){
+	return view('admin_verusuarios');
+});
+Route::post('/save', 'personaController@store');
+Route::put('/modificar/{id}', 'personaController@update');
+Route::get('/mostrar_usuarios', 'personaController@show');
+Route::get('/eliminar/{id}', 'personaController@destroy');
+Route::get('/usuarios/{id}', 'personaController@edit');

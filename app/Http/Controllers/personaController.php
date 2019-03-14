@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\persona;
 class personaController extends Controller
 {
     /**
@@ -35,7 +35,16 @@ class personaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datos=new persona();
+        $datos->nombre=$request->input('nombre');
+        $datos->paterno=$request->input('paterno');
+        $datos->materno=$request->input('materno');
+        $datos->usuario=$request->input('usuario');
+        $datos->password=$request->input('password');
+        $datos->tipo=$request->input('tipo');
+        $datos->imagen=$request->input('imagen');
+        $datos->save();
+        return $request->all();
     }
 
     /**
@@ -44,9 +53,10 @@ class personaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $usuarios = persona::all();
+        return view('admin_verusuarios', compact('usuarios'));
     }
 
     /**
@@ -57,7 +67,8 @@ class personaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $usuarios = persona::find($id);
+        return view('admin_editarusuario', compact('usuarios'));
     }
 
     /**
@@ -67,9 +78,18 @@ class personaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id, Request $request )
     {
-        //
+        $datos= persona::find($id);
+        $datos->nombre=$request->input('nombre');
+        $datos->paterno=$request->input('paterno');
+        $datos->materno=$request->input('materno');
+        $datos->usuario=$request->input('usuario');
+        $datos->password=$request->input('password');
+        $datos->tipo=$request->input('tipo');
+        $datos->imagen=$request->input('imagen');
+        $datos->save();
+        return $request->all();
     }
 
     /**
@@ -80,6 +100,9 @@ class personaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = new persona();
+        $user =$user::find($id);
+        $user->delete(); 
+        return redirect('mostrar_usuarios');
     }
 }
