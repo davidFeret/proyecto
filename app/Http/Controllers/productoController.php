@@ -59,9 +59,10 @@ class productoController extends Controller
         $producto->cantidad = '0';
         $producto->imagen = $nombre;
         $producto->description = $request->input('description');
-        $producto->slug = $request->input($slug);
 
+        $producto->save();
 
+        return redirect('admin_producto');
     }
 
     /**

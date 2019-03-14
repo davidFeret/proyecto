@@ -23,7 +23,7 @@
     <title>App Name - @yield('title')</title>
 </head>
 
-<body>
+<body ng-controller="ctrl">
     @yield('header')
 
     @yield('content')

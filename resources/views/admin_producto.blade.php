@@ -148,12 +148,6 @@
 
 
 @section('scripts')
-<script>
-  $(".select2-A").select2({
-    placeholder: "Tipo de usuario",
-    allowClear: true
-  });
-</script>
 
 <script type="text/javascript">
 </script>
@@ -162,5 +156,5 @@
 @endsection
 
 @section('scriptAngular')
-    
+
 @endsection
