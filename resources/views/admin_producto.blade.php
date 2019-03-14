@@ -51,7 +51,7 @@
         <li class="active"><a href="#"><span class="fa-home fa"></span>Inicio</a></li>
 
         <li class="ripple">
-          <a class="tree-toggle nav-header" href="#"><span class="fa-home fa"></span> Usuarios 
+          <a class="tree-toggle nav-header" href="#"><span class="icon-user"></span> Usuarios 
             <span class="fa-angle-right fa right-arrow text-right"></span>
           </a>
           <ul class="nav nav-list tree">
@@ -61,7 +61,7 @@
         </li>
 
         <li class="ripple">
-          <a class="tree-toggle nav-header" href="#"><span class="fa-home fa"></span> Productos 
+          <a class="tree-toggle nav-header" href="#"><span class="icon-drawar"></span> Productos 
             <span class="fa-angle-right fa right-arrow text-right"></span>
           </a>
           <ul class="nav nav-list tree">
@@ -70,11 +70,11 @@
           </ul>
         </li>
 
-        <li class=""><a href="/admin/pedido/registros"><span class="fa-home fa"></span>Pedidos</a></li>
+        <li class=""><a href="#"><span class="icon-basket-loaded"></span>Pedidos</a></li>
 
         <li class=""><a href="#"><span class="fa-home fa"></span>Ventas</a></li>
 
-        <li class=""><a href="#"><span class="fa-home fa"></span>Configuración</a></li>
+        <li class=""><a href="#"><span class="icon-settings"></span>Configuración</a></li>
 
       </ul>
     </div>
@@ -92,6 +92,15 @@
           
           {{-- Aquí --}}
           <div class="col-md-12">
+            <div class="panel box-shadow-none content-header">
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <p class="animated fadeInDown">
+                            Productos <span class="fa-angle-right fa"></span> Agregar producto
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="panel box-v4">
               <div class="panel-heading bg-white border-none">
                 <h3 align="center"><span class="icons icon-plus"></span> Agregar un nuevo producto </h3>

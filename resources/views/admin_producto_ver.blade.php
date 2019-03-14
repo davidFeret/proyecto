@@ -113,57 +113,33 @@
                     <div class="col-md-12 top-20 padding-0">
                         <div class="col-md-12">
                             <div class="panel">
-                                <div class="panel-heading"><h3>Lista de productos</h3></div>
-                                <div class="panel-body">
-                                    <div class="responsive-table">
-                                        <table id="datatables-example" class="table table-striped table-bordered" width="100%" cellspacing="0">
-                                            <thead>
-                                                <tr>
-                                                    <th>Producto</th>
-                                                    <th>Precio</th>
-                                                    <th>Cantidad</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach ($productos as $producto)
-                                                <tr ng-click="visualizar({{ $producto -> id }})" data-toggle="modal" data-target="#myModal">
-                                                    <td>{{ $producto -> producto }}</td>
-                                                    <td>{{ $producto -> precio }}</td>
-                                                    <td>{{ $producto -> cantidad }}</td>
-                                                    {{-- <td><a href="/delete/{{ $producto -> id }}" class="btn btn-danger">Eliminar</a></td> --}}
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-
+                              <div class="col-sm-6 col-md-3 product-grid">
+                                  <div class="thumbnail">
+                                    <div class="product-location">
+                                      <span class="fa-map-marker fa"></span> Banyumas
+                                      </div>
+                                    <div class="product-price product-price-bottom">
+                                      <h4>$1,716</h4>
                                     </div>
+                                    <img src="../../asset/img/avatar.jpg" alt="..." >
+                                    <div class="caption">
+                                      <small>Category</small>
+                                      <small class="pull-right">
+                                        <span class="rate fa-star fa"></span>
+                                        <span class="rate fa-star fa"></span>
+                                        <span class="rate fa-star fa"></span>
+                                        <span class="rate fa-star fa"></span>
+                                        <span class="rate fa-star-half fa"></span>
+                                      </small>
+                                      <h4>Product Name</h4>
+                                      <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis.</p>
+                                      <p><a href="#" class="btn btn-primary" role="button">Buy</a></p>
+                                    </div>
+                                  </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div id="myModal" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                        
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Modal Header</h4>
-                            </div>
-                            <div class="modal-body">
-                                <p>Some text in the modal.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                            </div>
-                        
-                        </div>
-                    </div>
-
-                        
-
 
                 </div>
             </div>
@@ -183,8 +159,5 @@
 @endsection
 
 @section('scriptAngular')
-$scope.visualizar = function visualizar(id) {
-    location.replace('/admin/producto/agregar');
-    console.log(id);
-};
+
 @endsection
