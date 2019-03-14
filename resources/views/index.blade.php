@@ -66,7 +66,7 @@
           </a>
           <ul class="nav nav-list tree">
             <li><a href="/admin/producto/agregar">Agregar producto</a></li>
-            <li><a href="#">Ver productos</a></li>
+            <li><a href="/admin/producto/registros">Ver productos</a></li>
           </ul>
         </li>
 

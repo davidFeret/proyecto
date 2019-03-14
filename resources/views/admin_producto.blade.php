@@ -65,12 +65,12 @@
             <span class="fa-angle-right fa right-arrow text-right"></span>
           </a>
           <ul class="nav nav-list tree">
-            <li><a href="#">Agregar producto</a></li>
-            <li><a href="#">Ver productos</a></li>
+            <li><a href="/admin/producto/agregar">Agregar producto</a></li>
+            <li><a href="/admin/producto/registros">Ver productos</a></li>
           </ul>
         </li>
 
-        <li class=""><a href="#"><span class="fa-home fa"></span>Pedidos</a></li>
+        <li class=""><a href="/admin/pedido/registros"><span class="fa-home fa"></span>Pedidos</a></li>
 
         <li class=""><a href="#"><span class="fa-home fa"></span>Ventas</a></li>
 
@@ -128,7 +128,7 @@
                     </div>
 
                     <div class="form-group form-animate-text">
-                        <button type="submit" style="font-size:15px;" class="btn btn-raised btn-primary">Guardar</button>
+                        <button type="button" style="font-size:15px;" class="btn btn-raised btn-primary">Guardar</button>
                     </div>
 
                   </form>
@@ -141,6 +141,7 @@
     </div>
     <!-- end: content -->
   </div>
+
 </div>
 @endsection
 
@@ -156,5 +157,4 @@
 @endsection
 
 @section('scriptAngular')
-
 @endsection

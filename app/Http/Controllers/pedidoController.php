@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\producto;
+use Illuminate\Support\Facades\DB;
+use App\pedido;
 
-class productoController extends Controller
+class pedidoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +16,15 @@ class productoController extends Controller
      */
     public function index()
     {
+        $pedidos = DB::table('pedidos')
+                ->join('productos', 'pedidos.idProducto', '=', 'productos.id')
+                ->join('personas', 'pedidos.idUsuario', '=', 'personas.id')
+                ->select('personas.nombre', 'productos.producto', 'pedidos.cantidad', 'pedidos.total', 'pedidos.id')
+                ->get();
+            
         // Vista de registros agregados a la BD
-        $productos = Producto::all();
-        return view('admin_producto_ver', compact('productos'));
+        // $pedidos = Pedido::all();
+        return view('admin_pedidos', compact('pedidos'));
     }
 
     /**
@@ -27,8 +34,7 @@ class productoController extends Controller
      */
     public function create()
     {
-        // Vista de formulario para agregar registro
-        return view('admin_producto');
+        //
     }
 
     /**
@@ -39,32 +45,7 @@ class productoController extends Controller
      */
     public function store(Request $request)
     {
-        // Revisar si se ha mandado una imagen
-        if($request->hasFile('imagen')) {
-            // Sí se ha mandado una imagen
-            $file = $request->file('imagen');
-            $nombre = time().$file->getClientOriginalName();
-
-            $file->move(public_path().'/productos/',$nombre);
-        } else {
-            $nombre = "default.png";
-        }
-
-        $slug = time().$request->input('nombre');
-        
-        $producto = new Producto();
-
-        $producto->slug = $slug;
-        $producto->producto = $request->input('nombre');
-        $producto->precio = $request->input('precio');
-        $producto->descuento = '0';
-        $producto->cantidad = '0';
-        $producto->imagen = $nombre;
-        $producto->description = $request->input('description');
-
-        $producto->save();
-
-        return redirect('admin_producto');
+        //
     }
 
     /**
@@ -76,6 +57,13 @@ class productoController extends Controller
     public function show($id)
     {
         //
+        $pedidos = DB::table('pedidos')
+            ->join('productos', 'pedidos.idProducto', '=', 'productos.id')
+            ->join('personas', 'pedidos.idUsuario', '=', 'personas.id')
+            ->select('personas.nombre', 'personas.imagen', 'productos.producto', 'pedidos.cantidad', 'pedidos.total', 'pedidos.id', 'pedidos.created_at')
+            ->where('pedidos.id', '=', $id)
+            ->get();
+        return $pedidos;
     }
 
     /**

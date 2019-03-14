@@ -20,4 +20,13 @@ Route::get('/', function() {
  * ------------------------------------------------------------------------
  */
 Route::get('/admin/producto/agregar', 'productocontroller@create');
+Route::get('/admin/producto/registros', 'productocontroller@index');
 Route::post('/admin/producto/guardar', 'productocontroller@store');
+
+/**
+ * ------------------------------------------------------------------------
+ * Rutas relacionadas a administrador: pedidos
+ * ------------------------------------------------------------------------
+ */
+Route::get('/admin/pedido/registros', 'pedidocontroller@index');
+Route::get('/admin/pedido/especifico/{id}', 'pedidocontroller@show');
