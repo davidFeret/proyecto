@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('asset/css/plugins/select2.min.css')}}">
 
-    <link rel="shortcut icon" href="{{asset('asset/img/logomi.png')}}">
+    <link rel="shortcut icon" href="{{asset('asset/img/logo.png')}}">
     <!-- end: Css -->
 
     @yield('styles')
