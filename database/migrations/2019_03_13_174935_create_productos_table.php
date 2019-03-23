@@ -17,11 +17,10 @@ class CreateProductosTable extends Migration
             $table->increments('id');
             $table->string('slug');
             $table->string('producto');
-            $table->string('description',200);
             $table->double('precio', 6, 2);
             $table->integer('descuento');
             $table->integer('cantidad');
-            $table->integer('imgPrincipal')->default('0');
+            $table->string('imagen');
             $table->timestamps();
         });
     }

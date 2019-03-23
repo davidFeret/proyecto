@@ -55,8 +55,8 @@
             <span class="fa-angle-right fa right-arrow text-right"></span>
           </a>
           <ul class="nav nav-list tree">
-            <li><a href="#">Agregar usuario</a></li>
-            <li><a href="#">Ver usuarios</a></li>
+            <li><a href="http://127.0.0.1:8000/usuarios">Agregar usuario</a></li>
+            <li><a href="http://127.0.0.1:8000/mostrar_usuarios">Ver usuarios</a></li>
           </ul>
         </li>
 
@@ -65,8 +65,8 @@
             <span class="fa-angle-right fa right-arrow text-right"></span>
           </a>
           <ul class="nav nav-list tree">
-            <li><a href="/admin/producto/agregar">Agregar producto</a></li>
-            <li><a href="/admin/producto/registros">Ver productos</a></li>
+            <li><a href="#">Agregar producto</a></li>
+            <li><a href="#">Ver productos</a></li>
           </ul>
         </li>
 
@@ -91,10 +91,11 @@
         <div class="col-md-12 padding-0">
           
           {{-- Aquí --}}
-          <div class="col-md-12">
+          <div class="col-md-12" >
             <div class="panel box-v4">
               <div class="panel-heading bg-white border-none">
                 <h3 align="center"><span class="icons icon-user-follow"></span> Registro de nuevo usuario </h3>
+                <button type="button" class="btn btn-primary btn-lg" ng-click="guardar()">Guardar</button>
               </div>
               <div class="panel-body padding-0">
                 <div class="col-md-6 col-xs-6 col-md-6 col-lg-6box-v4-alert">
@@ -102,25 +103,25 @@
                   <form action="">
 
                     <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                      <input type="text" class="form-text" name="#" required>
+                      <input type="text" class="form-text" name="nombre" ng-model="datos.nombre" required>
                       <span class="bar"></span>
                       <label>Nombre(s)</label>
                     </div>
 
                     <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                      <input type="text" class="form-text" name="#" required>
+                      <input type="text" class="form-text" name="paterno" ng-model="datos.paterno" required>
                       <span class="bar"></span>
                       <label>Apellido paterno</label>
                     </div>
 
                     <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                      <input type="text" class="form-text" name="#" required>
+                      <input type="text" class="form-text" name="materno" ng-model="datos.materno" required>
                       <span class="bar"></span>
                       <label>Apellido materno</label>
                     </div>
 
                     <div class="form-group form-animate-text">
-                      <input type="text" class="form-text Animated" required>
+                      <input type="text" class="form-text Animated" name="fechaNacimiento" required>
                       <span class="bar"></span>
                       <label><span class="fa fa-calendar"></span> Fecha de nacimiento
                     </div>
@@ -134,38 +135,36 @@
                     <form action="">
   
                       <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <input type="text" class="form-text" name="#" required>
+                        <input type="text" class="form-text" name="usuario" ng-model="datos.usuario" required>
                         <span class="bar"></span>
                         <label>Nombre de usuario</label>
                       </div>
   
                       <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <input type="password" class="form-text" name="#" required>
+                        <input type="password" class="form-text" name="contraseña" required>
                         <span class="bar"></span>
                         <label>Contraseña</label>
                       </div>
 
                       <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <input type="password" class="form-text" name="#" required>
+                        <input type="password" class="form-text" name="confirmarContrasea" ng-model="datos.password" required>
                         <span class="bar"></span>
                         <label>Confirmar contraseña</label>
                       </div>
 
                       <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <input type="file" class="form-text" name="#" required>
+                        <input type="text" class="form-text" name="#" ng-model="datos.imagen" required>
                         <span class="bar"></span>
                       </div>
 
                       <div class="form-group form-animate-text" style="margin-top:40px !important;">
-                        <select class="select2-A">
+                        <select class="select2-A" name="tipo" ng-model="datos.tipo">
                           <optgroup label="Usuarios disponibles">
                             <option value="Gerente">Gerente</option>
                             <option value="Trabajador">Trabajador</option>
                             <option value="Cliente">Cliente</option>
                           </optgroup>
-                        </select>
                       </div>
-
                     </form>
   
                   </div>
@@ -184,19 +183,43 @@
 
 
 @section('scripts')
-<script>
-  $(".select2-A").select2({
-    placeholder: "Tipo de usuario",
-    allowClear: true
-  });
-</script>
+
 
 <script type="text/javascript">
+
 </script>
 
 
 @endsection
 
 @section('scriptAngular')
-    
+    $scope.datos={};
+
+    $scope.datos2 = [<?php echo $usuarios;?>];
+    $scope.datos.nombre = $scope.datos2[0].nombre;
+    $scope.datos.paterno = $scope.datos2[0].paterno;
+    $scope.datos.materno = $scope.datos2[0].materno;
+    $scope.datos.usuario = $scope.datos2[0].usuario;
+    $scope.datos.password = $scope.datos2[0].password;
+    $scope.datos.tipo = $scope.datos2[0].tipo;
+    $scope.datos.imagen = $scope.datos2[0].imagen;
+
+    $scope.guardar=function()
+    {
+      console.log($scope.datos.tipo);
+      $http.put('/modificar/'+ $scope.datos2[0].id, $scope.datos).then(
+            function(response)
+            {
+              alert('Se a modificado con exito');
+              $scope.datos={};
+              location.reload();
+            },
+            function(errorResponse)
+            {
+              alert('Complete todos los campos');
+            }
+
+          );
+    }
+
 @endsection
